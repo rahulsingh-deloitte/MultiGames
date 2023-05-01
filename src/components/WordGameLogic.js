@@ -11,7 +11,7 @@ export const WordGameLogic = () => {
         e.preventDefault()
         // localStorage.setItem('word',title)
     }
-    const[title,setTitle]=useState("")
+    let[title,setTitle]=useState("")
     let[duplicate,setduplicate]=useState([])
     let yellow = '#ffc805';
     const [bgColor, setBgColor] = useState(yellow);
@@ -48,7 +48,7 @@ export const WordGameLogic = () => {
             </>
         )
       })}</div>
-     <Link className='btn btn-primary m-5' to="/player" state={{ from: duplicate }}>Launch</Link>
+     <Link className='btn btn-primary m-5' to="/player" state={{ from: duplicate, orignal:title }}>Launch</Link>
       </>
           
   )
